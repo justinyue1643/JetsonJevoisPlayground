@@ -8,7 +8,9 @@ cv::Mat loadImage(const std::string& path) {
     cv::Mat img = cv::imread(path);
     if (img.empty()) {
         // throw an error
+        std::cerr << "loadImage(): Image could not be loaded" << std::endl;
     }
+    std::cout << "loadImage(): Image was loaded!" << std::endl;
 
     return img;
 }

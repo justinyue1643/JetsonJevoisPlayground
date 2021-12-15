@@ -8,6 +8,7 @@
 #include <iostream>
 #include <opencv2/opencv.hpp>
 
+cv::Mat loadImage(const std::string& path);
 void displayVideo();
 
 #endif //JETSONJEVOISPLAYGROUND_OPENCV_OPERATIONS_HPP
