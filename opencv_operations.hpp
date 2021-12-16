@@ -10,5 +10,6 @@
 
 cv::Mat loadImage(const std::string& path);
 void displayVideo();
+cv::Mat resizeImage(const cv::Mat& img, int width, int height);
 
 #endif //JETSONJEVOISPLAYGROUND_OPENCV_OPERATIONS_HPP

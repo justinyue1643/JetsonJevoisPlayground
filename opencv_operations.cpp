@@ -15,6 +15,13 @@ cv::Mat loadImage(const std::string& path) {
     return img;
 }
 
+cv::Mat resizeImage(const cv::Mat& img, int width, int height) {
+    cv::Mat resizedImg;
+    cv::resize(img, resizedImg, cv::Size(width, height));
+
+    return resizedImg;
+}
+
 void displayVideo() {
     std::cout << "displayVideo(): Show camera stream" << std::endl;
     cv::VideoCapture cap(0, cv::CAP_ANY);

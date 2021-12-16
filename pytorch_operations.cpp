@@ -16,7 +16,7 @@ int loadModel(int argc, torch::jit::script::Module& model, const std::string& pa
     }
 
     try {
-        model = torch::jit::load(path);
+        model = torch::jit::load(path, torch::kCUDA);
     }
     catch(const c10::Error& e) {
         std::cerr << "loadModel(): error loading the model" << std::endl;
